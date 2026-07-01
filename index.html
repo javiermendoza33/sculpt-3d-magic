@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sculpt — Your ideas into 3D Magic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --text-dark: #3D3D3D;
+    --text-light: #6E6E6E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-dark);
+    background: #ffffff;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Nav */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 48px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .logo .plus {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--text-light);
+  }
+
+  .login-btn {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    border: 1px solid #E2E2E2;
+    border-radius: 999px;
+    padding: 10px 22px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .login-btn:hover {
+    border-color: #C9C9C9;
+    background: #FAFAFA;
+  }
+
+  /* Hero content */
+  .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 400;
+    color: var(--text-dark);
+    letter-spacing: -1px;
+  }
+
+  h1 .line-2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+  }
+
+  h1 .star-icon {
+    width: 28px;
+    height: 28px;
+    margin-top: 10px;
+    flex-shrink: 0;
+  }
+
+  h2 {
+    margin-top: 28px;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-light);
+    line-height: 1.4;
+    max-width: 560px;
+  }
+
+  .cta {
+    margin-top: 40px;
+    position: relative;
+    display: inline-flex;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 999px;
+    background: conic-gradient(from 180deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb, #fcb69f, #ff9a9e);
+    z-index: 0;
+  }
+
+  .cta a {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 999px;
+    margin: 2px;
+  }
+
+  .cta .icon {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta .icon::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--text-dark);
+    border-radius: 50%;
+  }
+
+  /* Decorative background */
+  .bg-deco {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .bg-deco svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 24px; }
+    .nav-links { display: none; }
+    h1 { font-size: 48px; }
+    h1 .plus-sup { font-size: 20px; }
+    h2 { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bg-deco">
+    <svg viewBox="0 0 1512 982" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M120 230 C 260 180, 420 180, 520 260" stroke="#EDEDED" stroke-width="1.5"/>
+      <path d="M990 260 C 1090 180, 1250 180, 1390 230" stroke="#EDEDED" stroke-width="1.5"/>
+      <rect x="330" y="270" width="80" height="80" stroke="#F1F1F1" stroke-width="1.2"/>
+      <rect x="1100" y="640" width="90" height="90" stroke="#F1F1F1" stroke-width="1.2"/>
+      <circle cx="290" cy="700" r="40" stroke="#F1F1F1" stroke-width="1.2"/>
+      <line x1="300" y1="290" x2="300" y2="720" stroke="#F4F4F4" stroke-width="1"/>
+      <line x1="1220" y1="290" x2="1220" y2="720" stroke="#F4F4F4" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <nav>
+    <div class="logo"><span class="plus">+</span> Sculpt</div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#inspo">Inspo</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#login" class="login-btn">Log in</a>
+  </nav>
+
+  <div class="hero-content">
+    <h1>
+      Your ideas into<br>
+      <span class="line-2">3D Magic<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0 C12.5 6.5 17.5 11.5 24 12 C17.5 12.5 12.5 17.5 12 24 C11.5 17.5 6.5 12.5 0 12 C6.5 11.5 11.5 6.5 12 0 Z"/></svg></span>
+    </h1>
+    <h2>Sketch, sculpt, and transform<br>concepts into models in a few clicks.</h2>
+    <div class="cta">
+      <a href="#start">
+        <span class="icon"></span>
+        Start Creating
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
